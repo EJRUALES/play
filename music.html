@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .music-player {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .music-player img {
+            width: 150px;
+            height: 150px;
+            margin-right: 20px;
+        }
+
+        .music-info {
+            font-size: 18px;
+        }
+
+        .music-info p {
+            margin: 5px 0;
+        }
+
+        .search-form {
+            margin-bottom: 20px;
+        }
+
+        .search-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .search-form input[type="text"], .search-form select {
+            padding: 10px;
+            width: 300px;
+            margin-bottom: 10px;
+        }
+
+        .search-form button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .recommended-songs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .recommended-songs article {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 200px;
+        }
+
+        .recommended-songs article img {
+            width: 100%;
+            height: auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        footer a {
+            color: white;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+   
+    <header>
+        <div class="logo" aria-label="Website Logo">My Music Player</div>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Library</a></li>
+                <li><a href="#">Playlists</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+       
+        <section class="music-player" aria-describedby="current-song-info">
+            <img src="misteryoso.jpg" alt="Album Art" />
+            <div class="music-info" id="current-song-info">
+                <p><strong>Song Title:</strong> <span id="song-title">misteryoso</span></p>
+                <p><strong>Artist:</strong> <span id="artist-name">Cup Of Joe</span></p>
+                <p><strong>Album:</strong> <span id="album-name">Cup Of Joe</span></p>
+            </div>
+            <audio controls>
+                <source src="misteryoso.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        
+        <section class="search-form" aria-labelledby="search-label">
+            <form action="#" method="GET">
+                <label id="search-label" for="search">Search for songs:</label>
+                <input type="text" id="search" name="query" aria-label="Search by title, artist, or album" placeholder="Enter title, artist, or album">
+                <button type="submit" aria-label="Search">Search</button>
+            </form>
+        </section>
+
+       
+        <aside class="recommended-songs" aria-label="Recommended Songs">
+            <article data-song-title="Song Title 1" data-artist="Artist 1" data-album-art="album1.jpg">
+                <img src="patutunguhan.png" alt="Album 1 Art" />
+                <h3>patutunguhan</h3>
+                <p>Cup Of Joe</p>
+            </article>
+            <article data-song-title="Song Title 2" data-artist="Artist 2" data-album-art="album2.jpg">
+                <img src="tingin.webp" alt="Album 2 Art" />
+                <h3>tingin</h3>
+                <p>Cup Of Joe</p>
+            </article>
+            <article data-song-title="Song Title 3" data-artist="Artist 3" data-album-art="album3.jpg">
+                <img src="sinderela.jpg" alt="Album 3 Art" />
+                <h3>sinderela</h3>
+                <p>Cup Of Joe</p>
+            </article>
+        </aside>
+    </main>
+
+   
+    <footer>
+        <p>&copy; 2024 My Music Player. All Rights Reserved.</p>
+        <a href="#" aria-label="Facebook">Facebook</a> | 
+        <a href="#" aria-label="Twitter">Twitter</a> | 
+        <a href="#" aria-label="Instagram">Instagram</a>
+    </footer>
+
+</body>
+</html>
